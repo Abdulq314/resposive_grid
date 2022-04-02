@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS GRID DESIGN</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0px 0px;
+        padding: 0px 0px;
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-weight: 500 500;
+        background-color:hsl(56, 73%, 96%)
+      }
+      .bg{
+          margin:2em 9em;
+      }
+      .container {
+        background-color: hsl(0, 0%, 81%); 
+        /* border:2px solid green; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 25px;
+
+        margin: auto 2rem;
+        padding: 2rem;
+        padding-top:2rem;
+        padding-bottom:2rem;
+        border-radius:25px;
+        margin-top:2rem;
+      }
+      
+      .item {
+        border-radius: 10px;
+        color: white;
+        padding: 25px;
+      }
+      #daniel {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: hsl(263, 55%, 52%);
+      }
+      #daniel::before{
+          content:"  ";
+          background: url(/images/bg-pattern-quotation.svg) no-repeat center;
+          position: absolute;
+          z-index: -1;
+          opacity: 0.4;
+          
+
+      }
+
+      #jonathan {
+        background-color: hsl(217, 19%, 35%);
+      }
+      #patric {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        /* color: black; */
+        background-color: hsl(219, 29%, 14%);
+      }
+      #kira {
+        grid-column-start: 4;
+        grid-row-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: white;
+        color: black;
+      }
+      #jean {
+        background-color: white;
+        color: black;
+      }
+      img {
+        display: inline;
+        border-radius: 50%;
+        border: 1px solid white;
+        position: relative;
+        height: 25px;
+        width: auto;
+        top: -17px;
+        left: -15px;
+      }
+      .name {
+        margin: 0px;
+        position: relative;
+        top: -3rem;
+        left: 1.5rem;
+        padding: 0px 0px;
+      }
+      .name h6,
+      h5 {
+        /* display:inline-block; */
+        margin: 0px 0px;
+        padding: 0px 0px;
+      }
+      .name h6 {
+        opacity: 50%;
+      }
+
+      .content {
+        margin: -45px 0px;
+        padding: 0px 0px;
+        margin-bottom: 20px;
+      }
+      .dark {
+        font-weight: 800;
+      }
+      .light {
+        opacity: 70%;
+        font-weight: 550;
+      }
+      #daniel::after{
+          content:"";
+          display: flex;
+          background:url(/images/bg-pattern-quotation.svg);
+          z-index: -1;
+      }
+      @media screen and (max-width:955px){
+        .container{
+            display: flex;
+            align-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+      }
+      @media screen and (max-width:550px){
+        .container{
+            display: flex;
+            align-content: center;
+            align-content: center;
+            flex-direction: column;
+            padding: 0%;
+            
+            margin: 0%;
+        }
+        .bg{
+            margin: 0px 0px;
+            padding: 0px;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="container">
+        <div class="item" id="daniel">
+          <div class="images">
+            <img src="/images/image-daniel.jpg" alt="" />
+          </div>
+          <div class="name">
+            <h5>Daniel Clifford</h5>
+            <h6>Verified Graduate</h6>
+          </div>
+          <div class="content">
+            <div class="dark">
+              <p>
+                I received a job offer mid-course, and the subjects I learned
+                were current, if not more so, in the company I joined. I
+                honestly feel I got every penny’s worth.
+              </p>
+            </div>
+            <div class="light">
+              <p>
+                “ I was an EMT for many years before I joined the bootcamp. I’ve
+                been looking to make a transition and have heard some people who
+                had an amazing experience here. I signed up for the free intro
+                course and found it incredibly fun! I enrolled shortly
+                thereafter. The next 12 weeks was the best - and most grueling -
+                time of my life. Since completing the course, I’ve successfully
+                switched careers, working as a Software Engineer at a VR
+                startup. ”
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item" id="jonathan">
+          <div class="images">
+            <img src="/images/image-jonathan.jpg" alt="" />
+          </div>
+          <div class="name">
+            <h5>Jonathan Walters</h5>
+            <h6>Verified Graduate</h6>
+          </div>
+          <div class="content">
+            <div class="dark">
+              <p>The team was very supported and kept mw motivated.</p>
+            </div>
+            <div class="light">
+              <p>
+                “ I started as a total newbie with virtually no coding skills. I
+                now work as a mobile engineer for a big company. This was one of
+                the best investments I’ve made in myself. ”
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item" id="kira">
+          <div class="images">
+            <img src="/images/image-kira.jpg" alt="" />
+          </div>
+          <div class="name">
+            <h5>Kira Whittle</h5>
+            <h6>Verified Graduate</h6>
+          </div>
+          <div class="content">
+            <div class="dark">
+              <p>Such a life-changing experience. Highly recommended!</p>
+            </div>
+            <div class="light">
+              <p>
+                " Before joing the bootcamp.I've never written a line of code.I
+                needed some structure of from professionals who can help me
+                learn programming step by step. I was encouraged to enrolled by
+                a former student of theirs who can say onlu wonderful things
+                about the program. The entire cirriculam and staff did not
+                disappoint.They were very hands-on and I never had to wait long
+                for assistance.The agile team project ,in particular, was
+                outstandig.It took my learning to the next level in the way that
+                no tutorial could ever have. In fact,I've often referred to to
+                it during interviewsas an example of my devlopment experience.It
+                certainely helped me in landing a good job as a fullstack
+                devloper after receiving multiple offer.100%recommended!"
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item" id="jean">
+          <div class="images">
+            <img src="/images/image-jeanette.jpg" alt="" />
+          </div>
+          <div class="name">
+            <h5>Jeanette Harmon</h5>
+            <h6>Verified Graduate</h6>
+          </div>
+          <div class="content">
+            <div class="dark">
+              <p>An over</p>
+            </div>
+            <div class="light">
+              <p>
+                I started as a total newbie with virtually no coding skills. I
+                now work as a mobile engineer for a big company. This was one of
+                the best investments I’ve made in myself. ”
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item" id="patric">
+          <div class="images">
+            <img src="/images/image-patrick.jpg" alt="" />
+          </div>
+          <div class="name">
+            <h5>Patrick Abrams</h5>
+            <h6>Verified Graduate</h6>
+          </div>
+          <div class="content">
+            <div class="dark">
+              <p>The team was very supportive and kept me motivated.</p>
+            </div>
+            <div class="light">
+              <p>
+                I started as a total newbie with virtually no coding skills. I
+                now work as a mobile engineer for a big company. This was one of
+                the best investments I’ve made in myself. ”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

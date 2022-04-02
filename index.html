@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | GRID-SECTION DESIGN</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        background-color: aqua;
+        text-color: white;
+        padding: 0px 0px;
+        margin: 0px 0px;
+      }
+      .container {
+        display: grid;
+      }
+      .box {
+        border: 2px solid red;
+      }
+      img {
+        /* border:1px solid white; */
+        margin: 10px 10px;
+        border-radius: 50%;
+        border: 1px solid wheat;
+        height: 30px;
+        width: 30px;
+      }
+      h5 {
+        left: 55px;
+        color: white;
+      }
+      h6 {
+        color: rgba(175, 162, 162, 0.842);
+      }
+      #box-2 h6 {
+        top: 160px;
+        left: 55px;
+        color: rgba(175, 162, 162, 0.842);
+      }
+      #box-2 h5 {
+        top: 148px;
+        left: 55px;
+        color: white;
+      }
+      .dark {
+        color: white;
+        margin: 0px;
+        padding: 0px 40px;
+      }
+      .light {
+        color: rgba(175, 162, 162, 0.842);
+      }
+
+      /* // GRID STRUCTURE */
+      .bg {
+        display: flex;
+        margin: 210px auto;
+        justify-content: center;
+        justify-items: center;
+        flex-direction: column;
+        height: 400px;
+        width: 1500px;
+      }
+      .container {
+        justify-content: center;
+        display: grid;
+
+        grid-template-areas:
+          "clifford  walters whittle"
+          "harmon  abhrams whittle";
+        background-color: hsl(210, 46%, 95%);
+        grid-gap: 20px;
+        padding: 100px;
+      }
+      .box {
+        border-radius: 8px;
+      }
+      #box-1 {
+        background-color: hsl(263, 55%, 52%);
+        grid-area: clifford;
+      }
+      #box-2 {
+        background-color: hsl(217, 19%, 35%);
+        grid-area: walters;
+        width: 60%;
+      }
+      #box-3 {
+        background-color: white;
+        grid-area: harmon;
+        width: 60%;
+      }
+      #box-4 {
+        background-color: hsl(219, 29%, 14%);
+        grid-area: abhrams;
+        /* width: 60%; */
+        /* display: inline; */
+      }
+      #box-5 {
+        background-color: white;
+        grid-area: whittle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="container">
+        <div class="box" id="box-1">
+          <img src="/images/image-daniel.jpg" alt="" />
+          <h5>Daniel Clifford</h5>
+          <h6>Verified Graduate</h6>
+          <p class="dark">
+            I received a job offer mid-course, and the subjects I learned were
+            current, if not more so, in the company I joined. I honestly feel I
+            got every penny’s worth.
+          </p>
+          <p class="light">
+            “ I was an EMT for many years before I joined the bootcamp. I’ve
+            been looking to make a transition and have heard some people who had
+            an amazing experience here. I signed up for the free intro course
+            and found it incredibly fun! I enrolled shortly thereafter. The next
+            12 weeks was the best - and most grueling - time of my life. Since
+            completing the course, I’ve successfully switched careers, working
+            as a Software Engineer at a VR startup. ”
+          </p>
+        </div>
+        <div class="box" id="box-2">
+          <img src="/images/image-jeanette.jpg" alt="" />
+          <h5>Jonathan Walters</h5>
+          <h6>Verified Graduate</h6>
+          <p class="dark">
+            The team was very supportive and kept me motivated.
+          </p>
+          <p class="light">
+            “ I started as a total newbie with virtually no coding skills. I now
+            work as a mobile engineer for a big company. This was one of the
+            best investments I’ve made in myself. ”
+          </p>
+        </div>
+        <div class="box" id="box-3">
+          <img src="/images/image-jonathan.jpg" alt="" />
+          <h5>Jeanette Harmon</h5>
+          <h6>Verified Graduate</h6>
+          <p class="dark">
+            An overall wonderful and rewarding experienceAn overall wonderful
+            and rewarding experience
+          </p>
+          <p class="light">
+            “ Thank you for the wonderful experience! I now have a job I really
+            enjoy, and make a good living while doing something I love. ”
+            Patrick Abrams Verified Graduate Awesome teaching support from TAs
+            who did the bootcamp themselves. Getting guidance from them and
+            learning from their experiences was easy. “
+          </p>
+        </div>
+        <div class="box" id="box-4">
+          <img src="/images/image-kira.jpg" alt="" />
+        </div>
+        <div class="box" id="box-5">
+          <img src="/images/image-patrick.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            temporibus esse aliquid? Minima quae voluptas facere aliquam
+            accusantium illum, excepturi voluptatum! Porro dolorum voluptates
+            magnam ipsam minima vitae repellendus nam distinctio officia
+            officiis perspiciatis nisi dolore sint sunt voluptatum aspernatur
+            saepe veritatis, nesciunt harum a illum? Fugiat assumenda at
+            architecto dolorem, magnam maxime possimus temporibus, distinctio
+            quisquam nisi tempora labore cupiditate animi quos explicabo earum
+            ratione voluptates pariatur voluptas enim! Impedit tenetur nobis
+            iusto ex optio in nesciunt consequatur ea iure! Deserunt repudiandae
+            adipisci laboriosam?
+          </p>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Abdul Kadir</a>.
+      </div>
+    </div>
+  </body>
+</html>
